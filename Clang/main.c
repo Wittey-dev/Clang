@@ -7,17 +7,18 @@
 //
 
 #include <stdio.h>
-#include <string.h>
-#define PRAISE "You are an extraodinary being."
+#include <float.h>
+// #define PRAISE "You are an extraodinary being."
 
-int years_to_days(int years);
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    char name[40];
-    printf("What is your name? ");
-    //scanf("%s", name);
-    printf("Hello, %s. %s\n", name, PRAISE);
-    printf("%zd %zd \n", strlen(PRAISE), sizeof(PRAISE));
+    double x = 1.0 / 3.0;
+    float y = 1.0 / 3.0;
+    printf("%.6f\n%.12f\n%.16f\n", x, x, x);
+    printf("%.6f\n%.12f\n%.16f\n", y, y, y);
+    if(x == DBL_DIG){printf("x equals DBL_DIG.");}
+    if(y == FLT_DIG){printf("y equals FLT_DIG.");}
     // printf("\bStarted by the sudden sound, Sally shouted, \n\"By the Great Pumpkin, what was that!\"\n");
 }
+
